@@ -1,0 +1,48 @@
+﻿@using EntityLayer.Concrate
+@model List<Portfolio>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int sayi = 0;
+}
+
+<div class="card-header border-0">
+	<h3 class="mb-0">Projelerim</h3>
+</div>
+<!-- Light table -->
+<div class="table-responsive">
+	<table class="table align-items-center table-dark table-flush">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col" class="sort" data-sort="name">#</th>
+				<th scope="col" class="sort" data-sort="budget">İsmi</th>
+				<th scope="col" class="sort" data-sort="status">Başlık</th>
+				<th scope="col" class="sort" data-sort="status">Resim</th>
+				<th scope="col" class="sort" data-sort="status">Github Url</th>
+				<th scope="col" class="sort text-center" data-sort="completion">İşlemler</th>
+			</tr>
+		</thead>
+		<tbody class="list">
+			@foreach (var x in Model)
+			{
+
+				sayi++;
+				<tr>
+					<td>@sayi</td>
+					<td>@x.Name</td>
+					<td>@x.Title</td>
+					<td><image style="width:40px; height:40px;" src="@x.ImageUrl"></image></td>
+					<td>@x.Url</td>
+					<td class="text-center">
+						<a href="/Portfolio/DeletePortfolio/@x.PortfolioID" class="btn btn-outline-danger"><i class="ni ni-fat-remove"></i> Sil</a>
+						<a href="/Portfolio/EditPortfolio/@x.PortfolioID" class="btn btn-outline-success" style="margin-left:25px;"><i class="ni ni-scissors"></i> Güncelle</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+<br />
+<a href="/Portfolio/AddPortfolio" class="btn btn-outline-primary"><i class="ni ni-fat-add"></i> Yeni Proje Ekle</a>
+
+

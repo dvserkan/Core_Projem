@@ -9,7 +9,13 @@ namespace Core_Projem.Controllers
             return PartialView();
         }
 
-
-
+        public PartialViewResult NewSideBar()
+        {
+            return PartialView();   
+        }
+        public PartialViewResult NewScript()
+        {
+            return PartialView();
+        }
     }
 }

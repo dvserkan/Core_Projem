@@ -1,13 +1,13 @@
 ﻿@model EntityLayer.Concrate.Skill
 @{
     ViewData["Title"] = "EditSkill";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div style="margin-left:35%;margin-top:8%;">
     <br /><br /><br />
     <h4 style="margin-left:10px;">Yetenek Düzenleme Sayfası</h4>
-    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:300px;">
+    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:270px;">
         <br />
         @Html.HiddenFor(x=> x.SkillID)
         <b>@Html.Label("Yetenek Adı")</b>

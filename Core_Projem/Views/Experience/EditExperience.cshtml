@@ -1,13 +1,13 @@
 ﻿@model EntityLayer.Concrate.Experience
 @{
     ViewData["Title"] = "EditExperience";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div style="margin-left:35%;margin-top:8%;">
     <br /><br /><br />
     <h4 style="margin-left:10px;">Deneyim Düzenleme Sayfası</h4>
-    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:650px;">
+    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:580px;">
         <br />
         @Html.HiddenFor(x=> x.ExperienceID)
         <b>@Html.Label("İsim")</b>

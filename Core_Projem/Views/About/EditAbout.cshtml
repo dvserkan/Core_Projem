@@ -1,13 +1,13 @@
 ﻿@model EntityLayer.Concrate.About
 @{
     ViewData["Title"] = "EditAbout";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div style="margin-left:35%;margin-top:3%;">
     <br /><br /><br />
     <h4 style="margin-left:10px;">Hakkımda Düzenleme Sayfası</h4>
-    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:850px;">
+    <form method="post" class="col-xl-5 col-md-5 table-bordered" style="height:800px;">
         <br />
         @Html.HiddenFor(x=> x.AboutID)
         <b>@Html.Label("Başlık")</b>

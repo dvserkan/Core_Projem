@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace BusinessLayer.Concrete
 			_portfolioDal = portfolioDal;
 		}
 
-		public void TAdd(Portfolio t)
+        public void TAdd(Portfolio t)
 		{
 			_portfolioDal.Insert(t);
 		}
@@ -38,7 +39,12 @@ namespace BusinessLayer.Concrete
 			return _portfolioDal.GetList();
 		}
 
-		public void TUpdate(Portfolio t)
+        public List<Portfolio> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Portfolio t)
 		{
 			_portfolioDal.Update(t);
 		}

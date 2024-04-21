@@ -3,6 +3,7 @@ using EntityLayer.Concrate;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 var builder = WebApplication.CreateBuilder(args);
 

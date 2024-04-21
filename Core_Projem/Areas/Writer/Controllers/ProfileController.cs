@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Core_Projem.Areas.Writer.Controllers
 {
     [Area("Writer")]
-    public class ProfileController : Controller
+	[Route("Writer/[controller]/[action]")]
+	public class ProfileController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
 
@@ -41,10 +42,11 @@ namespace Core_Projem.Areas.Writer.Controllers
             }
             user.Name = p.Name;
             user.Surname = p.Surname;
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, p.Password);
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index","Default");
+                return RedirectToAction("Index","Login");
             }
             return View();
         }

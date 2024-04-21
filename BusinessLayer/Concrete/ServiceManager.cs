@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace BusinessLayer.Concrete
 			_serviceDal = serviceDal;
 		}
 
-		public void TAdd(Service t)
+        public void TAdd(Service t)
 		{
 			_serviceDal.Insert(t);
 		}
@@ -38,7 +39,12 @@ namespace BusinessLayer.Concrete
 			return _serviceDal.GetList();
 		}
 
-		public void TUpdate(Service t)
+        public List<Service> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Service t)
 		{
 			_serviceDal.Update(t);
 		}

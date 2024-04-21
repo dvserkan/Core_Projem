@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace BusinessLayer.Concrete
 			_experienceDal = experienceDal;
 		}
 
-		public void TAdd(Experience t)
+        public void TAdd(Experience t)
 		{
 			_experienceDal.Insert(t);
 		}
@@ -38,7 +39,12 @@ namespace BusinessLayer.Concrete
 			return _experienceDal.GetList();
 		}
 
-		public void TUpdate(Experience t)
+        public List<Experience> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Experience t)
 		{
 			_experienceDal.Update(t);
 		}

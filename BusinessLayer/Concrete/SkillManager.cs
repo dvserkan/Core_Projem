@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace BusinessLayer.Concrete
 			_skillDal = skillDal;
 		}
 
-		public void TAdd(Skill t)
+        public void TAdd(Skill t)
 		{
 			_skillDal.Insert(t);
 		}
@@ -38,7 +39,12 @@ namespace BusinessLayer.Concrete
 			return _skillDal.GetList();
 		}
 
-		public void TUpdate(Skill t)
+        public List<Skill> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Skill t)
 		{
 			_skillDal.Update(t);
 		}

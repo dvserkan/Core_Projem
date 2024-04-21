@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,6 +38,11 @@ namespace BusinessLayer.Concrete
         public List<Feature> TGetlist()
         {
             return _featureDal.GetList();
+        }
+
+        public List<Feature> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(Feature t)

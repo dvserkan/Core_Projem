@@ -4,6 +4,7 @@ using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,8 +18,7 @@ namespace BusinessLayer.Concrete
 		{
 			_testimonialDal = testimonialDal;
 		}
-
-		public void TAdd(Testimonial t)
+        public void TAdd(Testimonial t)
 		{
 			_testimonialDal.Insert(t);
 		}
@@ -38,7 +38,12 @@ namespace BusinessLayer.Concrete
 			return _testimonialDal.GetList();
 		}
 
-		public void TUpdate(Testimonial t)
+        public List<Testimonial> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Testimonial t)
 		{
 			_testimonialDal.Update(t);
 		}

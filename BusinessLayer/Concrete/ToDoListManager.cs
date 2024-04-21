@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace BusinessLayer.Concrete
 			_todolistDal = todolistDal;
 		}
 
-		public void TAdd(ToDoList t)
+        public void TAdd(ToDoList t)
 		{
 			_todolistDal.Insert(t);
 		}
@@ -38,7 +39,12 @@ namespace BusinessLayer.Concrete
 			return _todolistDal.GetList();
 		}
 
-		public void TUpdate(ToDoList t)
+        public List<ToDoList> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(ToDoList t)
 		{
 			_todolistDal.Update(t);
 		}

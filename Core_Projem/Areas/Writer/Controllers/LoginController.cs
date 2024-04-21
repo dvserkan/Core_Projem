@@ -30,9 +30,10 @@ namespace Core_Projem.Areas.Writer.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.Username, p.Password, true, true);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Profile", new { area = "Writer" });
-                }
-                else
+                    return RedirectToAction("Dashboard", "Writer", new { area = "Writer" });
+					//Writer/Dashboard/Index
+				}
+				else
                 {
                     ModelState.AddModelError("", "Hatalı kullanıcı adı veya şifre");
                 }

@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrate;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-	public class ContactSubplaceController : Controller
+    [Authorize(Roles = "Admin")]
+    public class ContactSubplaceController : Controller
 	{
 		ContactManager contactManager = new ContactManager(new EfContactDal());
 

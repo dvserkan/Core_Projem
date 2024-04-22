@@ -2,11 +2,13 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-	public class AdminMessageController : Controller
+    [Authorize(Roles = "Admin")]
+    public class AdminMessageController : Controller
 	{
 		WriterMessageManager messageManager = new WriterMessageManager(new EfWriterMessageDal());
 		string pa = "admin@gmail.com";

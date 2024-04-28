@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-
-    public class AboutController : Controller
+	[Authorize(Roles = "Admin")]
+	public class AboutController : Controller
     {
         AboutManager c = new AboutManager(new EfAboutDal());
         public IActionResult Index()

@@ -36,7 +36,7 @@
                             </div>
                             <h4>Bir hesabın yok mu?</h4>
                             <h6 class="font-weight-light">2 Dakikada sisteme kaydını gerçekleştirebilirsin</h6>
-                            <form class="pt-3" method="post">
+                            <form class="pt-3" method="get">@* Bilerek yeni kayıt girişi yapılmaması için get yapıldı. *@
                                 <div class="form-group">
                                     <label>Adınız</label>
                                     <span asp-validation-for="Name" class="text-danger"></span>
@@ -75,14 +75,10 @@
                                 <div class="text-danger" asp-validation-summary="ModelOnly">
                                 </div>
                                 <div class="mt-3">
-                                    <button class="btn btn-primary">Kayıt Ol</button>
+                                    @* <button class="btn btn-primary">Kayıt Ol</button> *@
+                                    <a href="/Writer/Register/Index/" class="btn btn-primary">Yakında Hizmetinizde !</a>
                                     <a href="/Writer/Login/Index/" class="btn btn-primary">Geri Dön</a>
-                                    @*<a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" asp-action="Index" >Kayıt Ol</a>*@
                                 </div>
-                                
-                                @*<div class="text-center mt-4 font-weight-light">
-                                Already have an account? <a href="login.html" class="text-primary">Login</a>
-                                </div>*@
                             </form>
                         </div>
                     </div>

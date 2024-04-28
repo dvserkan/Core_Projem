@@ -48,5 +48,6 @@ Proje kapsamında kullanılan teknolojiler.<br>
 ![site9](https://github.com/dvserkan/Core_Projem/assets/163462310/ed743c8f-95ea-4eae-979a-e449c618a01a)
 ![site10](https://github.com/dvserkan/Core_Projem/assets/163462310/6f14938e-8914-4cb2-8cb8-f6ee2908cc45)
 ![site11](https://github.com/dvserkan/Core_Projem/assets/163462310/f9ed8220-0e4d-46c8-9b8d-98de7e359c84)
+![netcore](https://github.com/dvserkan/Core_Projem/assets/163462310/56ac7c4d-c05b-4164-92e9-70dc60e59e17)
 
 

@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+   
     public class AdminMessageController : Controller
 	{
 		WriterMessageManager messageManager = new WriterMessageManager(new EfWriterMessageDal());
-		string pa = "admin@gmail.com";
+		string pa = "serkancakirr28@gmail.com";
         public IActionResult ReceiverMessageList()
 		{
 			

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace DataAccessLayer.Concrete
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-PVJ83UH\\POSSQL;initial Catalog=MyCoreProje;integrated Security=true;TrustServerCertificate=True");
         }
-
+    
         public DbSet<About> Abouts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Experience> Experiences { get; set; }

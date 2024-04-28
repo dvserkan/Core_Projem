@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+ 
     public class FeatureController : Controller
     {
         FeatureManager mana = new FeatureManager(new EfFeatureDal());

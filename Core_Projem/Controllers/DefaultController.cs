@@ -23,14 +23,14 @@ namespace Core_Projem.Controllers
 		}
 
 		[HttpGet]
-		public PartialViewResult SendMessage()
+		public IActionResult SendMessage()
 		{
-			return PartialView();
+			return View();
 		}
 
 
         [HttpPost]
-        public PartialViewResult SendMessage(Message p)
+        public IActionResult SendMessage(Message p)
         {
             MessageManager message = new MessageManager(new EfMessageDal());
 
@@ -38,7 +38,7 @@ namespace Core_Projem.Controllers
             p.Status = true;
             message.TAdd(p);
 
-            return PartialView();
+            return RedirectToAction("Index","Default");
         }
 
     }

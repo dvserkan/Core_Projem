@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+ 
     public class SkillController : Controller
     {
         SkillManager mana = new SkillManager(new EfSkillDal());

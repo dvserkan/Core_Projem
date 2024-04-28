@@ -17,3 +17,26 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        // Form submit işlemi başarılı olduğunda
+        $('form').submit(function (event) {
+            event.preventDefault(); // Formun normal submit işlemini engelle
+
+            // AJAX ile formu gönder
+            $.ajax({
+                url: '/Default/SendMessage/', // Formun gönderileceği URL
+                type: 'POST', // HTTP method
+                data: $(this).serialize(), // Form verilerini al
+                success: function (response) {
+                    // Başarılı bir şekilde form gönderildiğinde
+                    // Yönlendirme işlemi yap
+                    window.location.href = '/Default/Index';
+                },
+                error: function (xhr, status, error) {
+                    // Hata durumunda gerekli işlemleri yapabilirsiniz
+                }
+            });
+        });
+    });
+</script>

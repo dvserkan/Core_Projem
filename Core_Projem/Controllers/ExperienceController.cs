@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+   
     public class ExperienceController : Controller
     {
         ExperienceManager man = new ExperienceManager(new EfExperienceDal());

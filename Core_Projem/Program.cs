@@ -27,7 +27,7 @@ builder.Services.AddMvc();
 builder.Services.ConfigureApplicationCookie(options =>
 {
 	options.Cookie.HttpOnly = true;
-	options.ExpireTimeSpan = TimeSpan.FromMinutes(10); //AUT KALMA ZAMANI
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(100); //AUT KALMA ZAMANI
 	options.AccessDeniedPath = "/ErrorPage/Index/";
 	options.LoginPath = "/Writer/Login/Index/";
 });
@@ -41,7 +41,7 @@ if (!app.Environment.IsDevelopment())
 	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
-
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404/"); //Hata Sayfasý Yönlendirme.
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

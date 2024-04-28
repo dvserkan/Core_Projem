@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+
     public class AboutController : Controller
     {
         AboutManager c = new AboutManager(new EfAboutDal());

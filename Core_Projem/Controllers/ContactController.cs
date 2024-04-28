@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Projem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+  
     public class ContactController : Controller
     {
         MessageManager messageManager = new MessageManager(new EfMessageDal());

@@ -24,16 +24,16 @@ Proje kapsamında kullanılan teknolojiler.<br>
 📌 Microsoft.Entity.FrameworkCore.Desing (8.0.3)<br>
 📌 Microsoft.Entity.FrameworkCore.SqlServer (8.0.3)<br>
 📌 Microsoft.Entity.FrameworkCore.Tools (8.0.3)<br>
-📌 Entity Framework Core
-📌 Ajax
-📌 Restful API
-📌 Fluent Validation
-📌 Asp.Net Core Identity & Rolleme
-📌 N Tier Architecture
-📌 Repository Design Pattern
-📌 Authentication & Authorization
-📌 Code First / MSSQL
-📌 Swagger & Postman
+📌 Entity Framework Core<br>
+📌 Ajax<br>
+📌 Restful API<br>
+📌 Fluent Validation<br>
+📌 Asp.Net Core Identity & Rolleme<br>
+📌 N Tier Architecture<br>
+📌 Repository Design Pattern<br>
+📌 Authentication & Authorization<br>
+📌 Code First / MSSQL<br>
+📌 Swagger & Postman<br>
 📌 Code First<br>
 📌 Linq Sorguları<br>
 
